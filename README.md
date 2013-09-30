@@ -1,7 +1,4 @@
-# Middleman-Springboard
-
-Springboard is a starter-pack for [Middleman](https://middlemanapp.com/), 
-for quickly whipping together static-based websites.
+# RDO website
 
 To get started, you need to have Ruby and Ruby Gems installed, as well
 as "bundler".
@@ -22,25 +19,9 @@ changes made too — but try to keep forks separate. _Thanks!_
 ### Fedora, RHEL, & CentOS
 
 ```
-git clone https://github.com/OSAS/middleman-springboard.git YOUR_PROJECT
-cd YOUR_PROJECT
-./setup.sh # This script assumes your user account has sudo rights
-```
-
-### Other Linux distributions
-
-Currently, `setup.sh` is a super-simple script that only has support for
-Fedora, RHEL, and CentOS. 
-
-(Pull requests to add support for other distributions and operating systems
-are welcome.)
-
-Be sure you have a C++ and Ruby development environment, as well as Ruby Gems
-and Bundler, then run the following:
-
-```
-git clone https://github.com/OSAS/middleman-springboard.git YOUR_PROJECT
-cd YOUR_PROJECT
+sudo yum install -y ruby-devel rubygems gcc-c++ curl-devel rubygem-bundler
+git clone git@gitlab.osas.lab.eng.rdu2.redhat.com:garrett/rdo-middleman.git
+cd rdo-middleman
 bundle install
 ```
 
@@ -61,6 +42,11 @@ bundle install
    When you edit files (pages, layouts, CSS, etc.), the site will
    dyanmically update in development mode. (There's no need to refresh
    the page, unless you get a Ruby error.)
+
+
+## Updating
+
+When there are new gems in `Gemfile`, just run `bundle` again.
 
 
 ## Customizing your site
