@@ -2,6 +2,12 @@
 
 git submodule init && git submodule update
 
-sudo yum install -y ruby-devel rubygems-devel gcc-c++ curl-devel rubygem-bundler patch
+DEPENDENCIES="ruby-devel rubygems-devel gcc-c++ curl-devel rubygem-bundler patch"
+
+if hash dnf 2>/dev/null; then
+  sudo dnf install $DEPENDENCIES
+else
+  sudo yum install $DEPENDENCIES 
+fi
 
 bundle install
